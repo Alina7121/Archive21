@@ -31,13 +31,11 @@ export class UserComponent implements OnInit, OnDestroy {
     this.user = {
       id: this.route.snapshot.params['id'],
       name: this.route.snapshot.params['name']
-    }
+    }---this is a regular way to receive something from url
     */
   }
-
   ngOnDestroy(){
     console.log("Unsubscribe");
     this.paramsSubscription.unsubscribe();
   }
-
 }

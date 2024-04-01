@@ -12,17 +12,18 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
 
-const appRoutes: Routes = [
+const appRoutes: Routes = [//where we load the routes,these are all the routes that we want to use in our application
 {
-  path: '', component: HomeComponent
+  path: '', component: HomeComponent //this is the default route to home component
 },
 
 {
-  path: 'servers', component: ServersComponent
+  path: 'servers', component: ServersComponent //we hooked up the servers component to the servers route
 },
 
 {
-  path: 'users', component: UsersComponent, children: [
+  path: 'users', component: UsersComponent, children: [//this is the child route of users component,in order to use child rout we need to use 
+  
     {
       path: ':id/:name', component: UserComponent
     }
